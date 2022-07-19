@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="generator" content="Hugo 0.98.0" />
+        <title>Image Processing API</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="../css/styles.css" />
+        <meta name="theme-color" content="#712cf9" />
+    </head>
+    <body>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Image Processing API</h1>
+                        <p class="lead text-muted">
+                            The API is created to perform some handful processes on images applying the latest and fastest technologies available in the market for processing images. Currently the API only supports resizing images but we are planning to add more features soon.
+                        </p>
+                        <br><hr class="border-primary border-3 opacity-75">
+                        <h2 class="fw-light">Get Started</h2>
+                        <p class="text-start lead text-muted">
+                            Processing images is available through the parameters provided after <a href="/api">/api</a>.
+                            There are currently 3 main parameters:
+                            <ul class="text-start lead text-muted">
+                                <li> <strong>imageName:</strong> It is a mandatory parameter. It accepts the name of any image available in public/imgs/original folder.</li>
+                                <li> <strong>width:</strong> It is an optional parameter. used if you desire to resize an image.</li>
+                                <li> <strong>height:</strong> It is an optional parameter also. Used along with 'width' parameter to resize an image.</li>
+                            </ul>
+                        </p>
+                        <p class="text-start lead text-muted">
+                            If imageName was provided alone, the original image will be displayed. <br> Example: <br>
+                            <a  href="/api?imageName=fjord">/api?imageName=fjord</a> <br>
+                            <br>
+                            If imageName was provided along with width and height parameters, the image will be resized and cached
+                            to thumbnails folder. <br> Example: <br>
+                            <a href="/api?imageName=fjord&width=500&height=400">/api?imageName=fjord&width=500&height=400</a> <br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+    </body>
+</html>
