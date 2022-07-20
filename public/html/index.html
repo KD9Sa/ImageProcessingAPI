@@ -24,25 +24,39 @@
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <h1 class="fw-light">Image Processing API</h1>
                         <p class="lead text-muted">
-                            The API is created to perform some handful processes on images applying the latest and fastest technologies available in the market for processing images. Currently the API only supports resizing images but we are planning to add more features soon.
+                            An API to preview, resize and cache images using Sharp package.
                         </p>
-                        <br><hr class="border-primary border-3 opacity-75">
+                        <hr class="border-primary border-3 opacity-75">
                         <h2 class="fw-light">Get Started</h2>
                         <p class="text-start lead text-muted">
-                            Processing images is available through the parameters provided after <a href="/api">/api</a>.
-                            There are currently 3 main parameters:
-                            <ul class="text-start lead text-muted">
-                                <li> <strong>imageName:</strong> It is a mandatory parameter. It accepts the name of any image available in public/imgs/original folder.</li>
-                                <li> <strong>width:</strong> It is an optional parameter. used if you desire to resize an image.</li>
-                                <li> <strong>height:</strong> It is an optional parameter also. Used along with 'width' parameter to resize an image.</li>
-                            </ul>
+                            <em>Note: the links in this text assume the server is running on localhost:3000</em>
+                            <br><br>
+                            The API has exactly two endpoints, the first for the home page and the second for image processing as follows:
                         </p>
+                        <ul class="text-start lead text-muted">
+                            <li><a href="http://localhost:3000/">http://localhost:3000/</a></li> <em>Home endpoint</em>
+                            <li><a href="http://localhost:3000/api">http://localhost:3000/api</a></li> <em>Image processing endpoint</em>
+                        </ul>
+
                         <p class="text-start lead text-muted">
-                            If imageName was provided alone, the original image will be displayed. <br> Example: <br>
+                            The home page contains a brief description of what the API is capable of doing and provides some instructions to get started using it.
+                        <br><br>
+                            For the image processing endpoint, it must be combined with valid parameters to provide the desired results. There are 3 expected parameters:
+                        </p>
+                            
+                        <ul class="text-start lead text-muted">
+                            <li> <strong>imageName:</strong> <em>Mandatory parameter</em>. Must be passed an existing image name in the `imgs/original` folder.</li>
+                            <li> <strong>width:</strong> <em>Optional parameter</em>. Must be passed a positive integer.</li>
+                            <li> <strong>height:</strong> <em>Optional parameter</em>. Must be passed a positive integer.</li>
+                        </ul>
+                        
+                        <p class="text-start lead text-muted">
+                            The API will return and display the original image if the <strong>imageName</strong> parameter is provided alone. For example:
+                            <br>
                             <a  href="/api?imageName=fjord">/api?imageName=fjord</a> <br>
                             <br>
-                            If imageName was provided along with width and height parameters, the image will be resized and cached
-                            to thumbnails folder. <br> Example: <br>
+                            The API will resize, cache, and display the resized image if all the three parameters, <strong>imageName</strong>, <strong>width</strong>, and <strong>height</strong>, are provided. For example:
+                            <br>
                             <a href="/api?imageName=fjord&width=500&height=400">/api?imageName=fjord&width=500&height=400</a> <br>
                         </p>
                     </div>

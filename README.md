@@ -4,6 +4,31 @@ An API to preview, resize and cache images using Sharp package.
 
 ---
 
+## Get Started
+
+_Note: the links in this text assume the server is running on localhost:3000_
+
+The API has exactly two endpoints, the first for the home page and the second for image processing as follows:
+
+-   [http://localhost:3000/](http://localhost:3000/) <pre> _Home page endpoint_</pre>
+-   [http://localhost:3000/api](http://localhost:3000/api) <pre> _Image processing endpoint_</pre>
+
+The home page contains a brief description of what the API is capable of doing and provides some instructions to get started using it.
+
+For the image processing endpoint, it must be combined with valid parameters to provide the desired results. There are 3 expected parameters:
+
+-   **imageName**: _Mandatory parameter_. Must be passed an existing image name in the `imgs/original` folder.
+-   **width**: _Optional parameter_. Must be passed a positive integer.
+-   **height**: _Optional parameter_. Must be passed a positive integer.
+
+The API will return and display the original image if the **imageName** parameter is provided alone. For example:
+[http://localhost:3000/api?imageName=fjord](http://localhost:3000/api?imageName=fjord)
+
+The API will resize, cache, and display the resized image if all the three parameters, **imageName**, **width**, and **height**, are provided. For example:
+[http://localhost:3000/api?imageName=fjord&width=300&height=400](http://localhost:3000/api?imageName=fjord&width=300&height=400)
+
+---
+
 ## Configurations
 
 The following are the configurations used to deliver this project. Including devDependencies, dependencies, and scripts used:
@@ -24,8 +49,11 @@ _Note: the Node.js version used is v16.15.1_
 -   eslint
 -   eslint-config-prettier
 -   eslint-plugin-prettier
+-   jasmine
+-   jasmine-spec-reporter
 -   nodemon
 -   prettier
+-   supertest
 -   ts-node
 -   typescript
 
@@ -34,10 +62,7 @@ _Note: the Node.js version used is v16.15.1_
 **Dependencies List:**
 
 -   express
--   jasmine
--   jasmine-spec-reporter
 -   sharp
--   supertest
 
 <br>
 

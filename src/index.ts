@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(homeRoute);
 
-app.listen(port, () => {
+app.listen(port, (): void => {
     console.log(`The server is running on http://localhost:${port}`);
 });
 

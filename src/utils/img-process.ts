@@ -8,10 +8,14 @@ const resizeImage = async (
     height: number
 ): Promise<string | null> => {
     // Get the path of the image in imgs/original folder
-    const imagePath = handler.getImagePath(imageName);
+    const imagePath: string = handler.getImagePath(imageName);
 
     // Preparing the export path for the created thumbnail
-    const thumbnailPath = handler.getThumbnailPath(imageName, width, height);
+    const thumbnailPath: string = handler.getThumbnailPath(
+        imageName,
+        width,
+        height
+    );
 
     try {
         await sharp(imagePath).resize({ width, height }).toFile(thumbnailPath);

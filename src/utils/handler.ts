@@ -1,7 +1,13 @@
 import path from 'path';
 
-const originalPath = path.resolve(__dirname, '../../public/imgs/original');
-const thumbnailsPath = path.resolve(__dirname, '../../public/imgs/thumbnails');
+const originalPath: string = path.resolve(
+    __dirname,
+    '../../public/imgs/original'
+);
+const thumbnailsPath: string = path.resolve(
+    __dirname,
+    '../../public/imgs/thumbnails'
+);
 
 // Returns the path of the image in imgs/original folder provided the image name
 const getImagePath = (imageName: string): string => {
