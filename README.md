@@ -102,7 +102,7 @@ The following represents the project's file structure:
 
 ---
 
-##Maintainability
+## Maintainability
 
 The project is built with a structure which makes it scalable and maintainable:
 
